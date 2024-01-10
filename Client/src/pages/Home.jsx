@@ -100,10 +100,10 @@ export default function Home() {
         </Link>
       </div>
       {/* Home Crousel */}
-      <div className='m-auto max-w-7xl'>
-        <div>
+      <div className='max-w-7xl m-auto '>
+        <div className='mx-5'>
 
-          <h1 className='my-4 font-semibold mx-4 text-2xl'>Best Properties For You . . .</h1>
+          <h1 className='my-8 font-semibold mx-4 text-2xl'>Best Properties For You . . .</h1>
           <Swiper
             // install Swiper modules
             modules={[Navigation, Pagination, A11y]}
@@ -117,12 +117,12 @@ export default function Home() {
           >
             {sliderImage.map((data) => (
               <SwiperSlide key={data.location}>
-<Link to={data.location}>
-                <img
-                  className='object-cover w-full h-[500px] rounded-lg'
-                  src={`${data.url}`} alt="img" />
+                <Link to={data.location}>
+                  <img
+                    className='object-cover w-full h-[500px] rounded-lg'
+                    src={`${data.url}`} alt="img" />
 
-                  </Link>
+                </Link>
               </SwiperSlide>
             ))}
 
@@ -132,8 +132,8 @@ export default function Home() {
         {/* Offer listings */}
 
         <div className="my-5">
-          <div className="">
-            <h2 className='font-semibold text-xl'>New Offers</h2>
+          <div className="mx-5 my-4">
+            <h2 className='font-semibold text-xl '>New Offers</h2>
             <Link className='text-blue-800 hover:underline text-sm' to={'/search?offer=true'}>Show More</Link>
           </div>
           <div className="flex flex-wrap gap-4">
@@ -148,7 +148,7 @@ export default function Home() {
 
         {/* on Sale Listing */}
         <div className="mx-2">
-          <div className="mx-2">
+          <div className="mx-5 my-4">
             <h1 className='text-xl font-semibold '>Listing For Sale</h1>
             <Link className='text-blue-800 hover:underline text-sm' to={'/search?type=sale'}>Show More</Link>
           </div>
@@ -163,7 +163,7 @@ export default function Home() {
 
         {/* On Rent Listing */}
         <div className="">
-          <div className="mx-2">
+          <div className="mx-5 my-4">
             <h1 className='text-xl font-semibold'>Rent Listings</h1>
             <Link className='text-blue-800 hover:underline' to={`/search?type=rent`}>Show more</Link>
           </div>
